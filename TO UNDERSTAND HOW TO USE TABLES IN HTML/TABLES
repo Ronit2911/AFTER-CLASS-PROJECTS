@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title> Tables in html </title>
+    </head>
+    <body>
+        <table border="3"
+        <thead>
+            <tr> 
+                <th> NAME </th>
+                <th> CLASS </th>
+                <th> ROLL NO </th>
+                <th> PERCENTAGE </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> Jay </td>
+                <td> 8th  </td>
+                <td> 23 </td>
+                <td> 89% </td>
+            </tr>
+            <tr>
+                <td> Aditya </td>
+                <td> 9th </td>
+                <td> 45 </td>
+                <td> 92% </td>
+            </tr>
+            <tr>
+                <td> Manas </td>
+                <td> 1oth  </td>
+                <td> 12 </td>
+                <td> 85% </td>
+            </tr>
+            <tr>
+                <td> Ronit </td>
+                <td> 9th </td>
+                <td> 35 </td>
+                <td> 97% </td>
+            </tr>
+        </tbody>
+        </table>
+    </body>
+</html>
