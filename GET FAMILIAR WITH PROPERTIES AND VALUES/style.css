@@ -1,0 +1,37 @@
+/* global css */
+* {
+    font-size: 40px;
+    font-weight: 400;
+}
+/* external css */
+body {
+    background-color: lightseagreen;
+    text-align: center;    
+}
+h1 {
+    color: lightsalmon
+    }
+    /* element selector */
+p {
+    color: lightcyan;
+    font-size: 20px;
+    font-weight: 300;
+}
+/* class selector */
+.myclass {
+    color: lightgoldenrodyellow
+    }
+/* id selector */
+#myid {
+    color: lightpink;
+    }
+    /* group selector */
+h2, h3, p { 
+    text align : center;
+    }
+    
+
+
+    
+
+
