@@ -1,0 +1,53 @@
+/* Attribute Selectors: Select elements based on attributes */
+[data-type="example"] {
+    color: blue;
+}
+
+input[type="text"] {
+    border: 1px solid gray;
+}
+
+/* Child Selectors: Select direct children */
+.parent>.child {
+    font-weight: bold;
+}
+
+/* Sibling Selectors: Select adjacent or general siblings */
+.sibling1+.sibling2 {
+    margin-left: 10px;
+}
+
+.sibling1~.sibling3 {
+    color: green;
+}
+
+/* Hover Pseudo-Class: Apply styles on hover */
+.button:hover {
+    background-color: yellow;
+}
+
+/* Not Selector: Select elements that do not match */
+div:not(.exclude) {
+    padding: 10px;
+}
+
+/* Nth Child Selector: Select elements by position */
+li:nth-child(odd) {
+    background-color: lightgray;
+}
+
+/* After Pseudo-Element: Insert content after an element */
+p::after {
+    content: " (end)";
+}
+
+/* Before Pseudo-Element: Insert content before an element */
+p::before {
+    content: "Start: ";
+}
+
+/* First Letter Pseudo-Element: Style the first letter */
+p::first-letter {
+    font-size: 2em;
+    font-weight: bold;
+}
