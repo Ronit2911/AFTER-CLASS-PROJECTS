@@ -1,109 +1,246 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Slider</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .slider-container {
-            max-width: 700px;
-            width: 100%;
-            padding: 20px;
-        }
-
-        .carousel {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        .carousel-item img {
-            height: 450px;
-            object-fit: cover;
-            transition: transform 0.6s ease-in-out;
-        }
-
-        .carousel-item:hover img {
-            transform: scale(1.02);
-        }
-
-        .carousel-control-prev,
-        .carousel-control-next {
-            width: 50px;
-            height: 50px;
-            background-color: rgba(0, 0, 0, 0.4);
-            border-radius: 50%;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: background-color 0.3s;
-        }
-
-        .carousel-control-prev:hover,
-        .carousel-control-next:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-
-        .carousel-indicators {
-            bottom: 20px;
-        }
-
-        .carousel-indicators button {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.5);
-            transition: all 0.3s;
-        }
-
-        .carousel-indicators button.active {
-            background-color: white;
-            width: 30px;
-            border-radius: 6px;
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SCTS - Sri Chaitanya Techno School</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoRq3yy+5yE9PJ0c5i7m2Hj2GpD6lgX0R8jWPGxU8nbTov4" crossorigin="anonymous" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div class="slider-container">
-        <div class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-slide-to="3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://picsum.photos/700/450?random=1" class="w-100" alt="Slide 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://picsum.photos/700/450?random=2" class="w-100" alt="Slide 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://picsum.photos/700/450?random=3" class="w-100" alt="Slide 3">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://picsum.photos/700/450?random=4" class="w-100" alt="Slide 4">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">SCTS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">
+                            <i class="bi bi-house-door-fill me-1"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">
+                            <i class="bi bi-info-circle-fill me-1"></i>About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">
+                            <i class="bi bi-gear-fill me-1"></i>Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            <i class="bi bi-envelope-fill me-1"></i>Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </nav>
+
+    <!-- Sections -->
+    <header id="home" class="py-5 text-center bg-light">
+        <div class="container">
+            <h1>Welcome to Sri Chaitanya Techno School</h1>
+            <p class="lead">Innovating education for a brighter future</p>
+            <a href="#about" class="btn btn-primary mt-3 shadow">Learn More</a>
+            <!-- highlight cards row -->
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted"><i
+                                    class="bi bi-award-fill text-warning me-1"></i>Top School</h6>
+                            <p class="card-text">Consistently ranked among the top institutions in the region.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted"><i
+                                    class="bi bi-people-fill text-primary me-1"></i>Community</h6>
+                            <p class="card-text">A welcoming community of students, parents, and teachers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted"><i
+                                    class="bi bi-lightning-fill text-danger me-1"></i>Innovation</h6>
+                            <p class="card-text">Innovation drives our curriculum and extracurriculars.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>
+                Sri Chaitanya Techno School (SCTS) is committed to providing
+                quality education with a focus on technology and innovation.
+            </p>
+            <p>
+                Founded in 2005, SCTS has grown into a leading institution where
+                academics and extracurricular activities go hand in hand. Our
+                mission is to foster creativity, critical thinking, and
+                responsible citizenship among students.
+            </p>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-eye-fill me-2"></i>Our Vision</h5>
+                            <p class="card-text">To be a hub of excellence where
+                                students embrace technology and values to shape a
+                                better world.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-bullseye me-2"></i>Our Mission</h5>
+                            <p class="card-text">Deliver holistic education through
+                                innovation, guidance, and a nurturing environment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm service-card border-start border-4 border-primary">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-laptop me-2"></i>Modern Labs</h5>
+                            <p class="card-text">State‑of‑the‑art science and
+                                computer laboratories enabling hands‑on learning.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm service-card border-start border-4 border-success">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-person-badge me-2"></i>Experienced Faculty</h5>
+                            <p class="card-text">Dedicated teachers with years of
+                                experience in their subjects.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm service-card border-start border-4 border-warning">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-music-note-beamed me-2"></i>Extracurriculars</h5>
+                            <p class="card-text">Clubs, sports, and arts programs
+                                to develop well‑rounded students.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm service-card border-start border-4 border-info">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-briefcase-fill me-2"></i>Career Guidance</h5>
+                            <p class="card-text">Counseling and workshops to help
+                                students plan their future.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="activities" class="py-5">
+        <div class="container">
+            <h2>Extra Curricular Activities</h2>
+            <div class="row g-4 mt-3">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-top border-4 border-warning">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-chat-square-text-fill me-2"></i>Debate Competitions
+                            </h5>
+                            <p class="card-text">Students regularly participate in inter-school debate contests,
+                                sharpening critical thinking and public speaking skills.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-top border-4 border-success">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-trophy-fill me-2"></i>Sports</h5>
+                            <p class="card-text">A variety of sports programs including football, cricket, basketball,
+                                and athletics help students maintain physical fitness and teamwork.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-top border-4 border-primary">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-lightbulb-fill me-2"></i>Smart Living Programme</h5>
+                            <p class="card-text">An initiative teaching students about sustainable living, technology
+                                integration, and responsible digital habits.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Email: info@scts.edu</p>
+            <p>Phone: +91 12345 67890</p>
+            <form class="mt-4">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Your name" />
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Your email" />
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Your message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary shadow">Send
+                    Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="mt-5 bg-primary text-white py-3">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Sri Chaitanya Techno School. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qENYTu0CDmRcnn0vfuja9fqXQQK7nbBHeI6S4nxE+Q3q5tA2QtkKtu6qmF0eKp9k"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
